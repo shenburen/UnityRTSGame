@@ -5,9 +5,10 @@ using UnityEngine.AI;
 
 public class UnitMovement : MonoBehaviour
 {
+    public LayerMask ground;
+
     private Camera cam;
     private NavMeshAgent agent;
-    public LayerMask ground;
 
     private void Start()
     {
@@ -17,7 +18,7 @@ public class UnitMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(1))
         {
             RaycastHit hit;
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
