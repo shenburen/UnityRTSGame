@@ -80,8 +80,7 @@ public class UnitSelectionManager : MonoBehaviour
 
         unitsSelected.Add(unit);
 
-        EnableUnitMovement(unit, true);
-        TriggerSelectionIndicator(unit, true);
+        SelectUnit(unit, true);
     }
 
     private void MultiSelectByClicking(GameObject unit)
@@ -89,27 +88,39 @@ public class UnitSelectionManager : MonoBehaviour
         if (unitsSelected.Contains(unit) == false)
         {
             unitsSelected.Add(unit);
-            EnableUnitMovement(unit, true);
-            TriggerSelectionIndicator(unit, true);
+            SelectUnit(unit, true);
         }
         else
         {
-            EnableUnitMovement(unit, false);
-            TriggerSelectionIndicator(unit, false);
+            SelectUnit(unit, false);
             unitsSelected.Remove(unit);
         }
     }
 
-    private void DeselectAll()
+    public void DragSelect(GameObject unit)
+    {
+        if (unitsSelected.Contains(unit) == false)
+        {
+            unitsSelected.Add(unit);
+            SelectUnit(unit, true);
+        }
+    }
+
+    public void DeselectAll()
     {
         foreach (GameObject unit in unitsSelected)
         {
-            EnableUnitMovement(unit, false);
-            TriggerSelectionIndicator(unit, false);
+            SelectUnit(unit, false);
         }
 
         groundMarker.SetActive(false);
         unitsSelected.Clear();
+    }
+
+    private void SelectUnit(GameObject unit, bool isSelected)
+    {
+        EnableUnitMovement(unit, isSelected);
+        TriggerSelectionIndicator(unit, isSelected);
     }
 
     private void EnableUnitMovement(GameObject unit, bool shouldMove)
