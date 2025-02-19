@@ -10,6 +10,8 @@ public class AttackController : MonoBehaviour
     public Material followStateMaterial;
     public Material attackStateMaterial;
 
+    public int unitDamage;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy") && targetToAttack == null)

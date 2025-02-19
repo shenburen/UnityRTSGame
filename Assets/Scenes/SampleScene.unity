@@ -527,6 +527,7 @@ GameObject:
   - component: {fileID: 427660094}
   - component: {fileID: 427660098}
   - component: {fileID: 427660099}
+  - component: {fileID: 427660100}
   m_Layer: 8
   m_Name: Cube
   m_TagString: Enemy
@@ -660,6 +661,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+--- !u!114 &427660100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427660093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96200b1c538c67340bd821fa359a5470, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
 --- !u!1 &428523479
 GameObject:
   m_ObjectHideFlags: 0
@@ -1466,7 +1480,7 @@ PrefabInstance:
     - target: {fileID: 3464647938821150417, guid: db879adb8b4a8c84987778e3d00f0162,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.05
+      value: 27.98
       objectReference: {fileID: 0}
     - target: {fileID: 3464647938821150417, guid: db879adb8b4a8c84987778e3d00f0162,
         type: 3}
@@ -1476,7 +1490,7 @@ PrefabInstance:
     - target: {fileID: 3464647938821150417, guid: db879adb8b4a8c84987778e3d00f0162,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.82
+      value: 15.07
       objectReference: {fileID: 0}
     - target: {fileID: 3464647938821150417, guid: db879adb8b4a8c84987778e3d00f0162,
         type: 3}
