@@ -208,6 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a87e89b3d0f7a5448413b486138a332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stopAttackingDistance: 1.2
 --- !u!1102 &4159337482203887486
 AnimatorState:
   serializedVersion: 6
