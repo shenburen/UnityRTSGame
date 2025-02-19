@@ -209,6 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stopAttackingDistance: 1.2
+  attackRate: 1
 --- !u!1102 &4159337482203887486
 AnimatorState:
   serializedVersion: 6
