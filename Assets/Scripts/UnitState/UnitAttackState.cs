@@ -24,7 +24,7 @@ public class UnitAttackState : StateMachineBehaviour
     {
         if (attackController.targetToAttack != null && animator.transform.GetComponent<UnitMovement>().isCommandedToMove == false)
         {
-            agent.SetDestination(attackController.targetToAttack.position);
+            // agent.SetDestination(attackController.targetToAttack.position);
             LookAtTarget();
 
             if (attackTimer <= 0)
@@ -42,6 +42,10 @@ public class UnitAttackState : StateMachineBehaviour
             {
                 animator.SetBool("isAttacking", false);
             }
+        }
+        else
+        {
+            animator.SetBool("isAttacking", false);
         }
     }
 
