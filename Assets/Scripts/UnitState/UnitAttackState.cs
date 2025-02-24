@@ -18,6 +18,7 @@ public class UnitAttackState : StateMachineBehaviour
         attackController = animator.transform.GetComponent<AttackController>();
         agent = animator.transform.GetComponent<NavMeshAgent>();
         attackController.SetAttackMaterial();
+        attackController.muzzleEffect.gameObject.SetActive(true);
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -47,6 +48,11 @@ public class UnitAttackState : StateMachineBehaviour
         {
             animator.SetBool("isAttacking", false);
         }
+    }
+
+    public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        attackController.muzzleEffect.gameObject.SetActive(false);
     }
 
     private void Attack()
