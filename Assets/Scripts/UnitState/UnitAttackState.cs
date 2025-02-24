@@ -57,6 +57,8 @@ public class UnitAttackState : StateMachineBehaviour
 
     private void Attack()
     {
+        SoundManager.Instance.PlayInfantryAttackSound();
+
         int damageToInflict = attackController.unitDamage;
         attackController.targetToAttack.GetComponent<Unit>().TakeDamage(damageToInflict);
     }
